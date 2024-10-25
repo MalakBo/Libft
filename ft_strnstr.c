@@ -1,30 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbouyi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/24 21:40:47 by mbouyi            #+#    #+#             */
+/*   Updated: 2024/10/24 21:40:49 by mbouyi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
-#include<stdio.h>
-#include <stdlib.h>
-#include<string.h>
-char *ft_strnstr(char *haystack,char *needle, size_t len){
-    size_t i;
-    int j;
-    i = 0;
-    j = 0;
-    if(!haystack || !needle || !len)
-        return 0;
-    if(needle[j] == '\0')
-        return (haystack);
-    while(haystack[i]){
-        while(haystack[i + j] == needle[j] && i < len){
-            if(needle[j + 1] == '\0')
-                return (haystack + i);
-            else
-                j++;
-        }
-        i++;
-    }
-    return (NULL);
-}
-int main(int argc, char const *argv[])
+
+char	*ft_strnstr(char *big, char *little, size_t len)
 {
-    printf("%s\n",ft_strnstr("souita sabo3 is the best", "sabo3 ", 12));
-    printf("%s\n",strnstr("souita sabo3 is the best", "sabo3 ", 12));
-    return 0;
+	size_t	i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (!big || !little || !len)
+		return (0);
+	if (little[j] == '\0')
+		return (big);
+	while (big[i])
+	{
+		while (big[i + j] == little[j] && i < len)
+		{
+			if (little[j + 1] == '\0')
+				return (big + i);
+			else
+				j++;
+		}
+		i++;
+	}
+	return (NULL);
 }

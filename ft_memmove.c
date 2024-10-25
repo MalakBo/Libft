@@ -1,39 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbouyi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 20:59:53 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/24 20:59:55 by mbouyi           ###   ########.fr       */
+/*   Created: 2024/10/25 17:57:48 by mbouyi            #+#    #+#             */
+/*   Updated: 2024/10/25 17:57:50 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memmove(void *dest, void *src, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	if (!s)
+	if (!dest || !src || !n)
 		return (0);
-	while (i < n)
+	if (n > ft_strlen(src))
+		n = ft_strlen(src);
+	if (dest < src)
 	{
-		((unsigned char *)s)[i] = c;
-		i++;
+		ft_memcpy(dest, src, n);
 	}
-	return (s);
+	else
+	{
+		while (n-- > 0)
+		{
+			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
+		}
+	}
+	return (dest);
 }
+int	main(void)
+{
+	char	src[] = "GeeksForGeeks";
+	char	dest[100];
 
-/*    int main() {
-	char buffer1[50] = "OKII";
-	printf("Before ft_memset: %s\n", buffer1);
-	ft_memset(NULL,'H', 5);
-	//memset(buffer2, NULL, 1);
-	printf("After ft_memset: %s\n", buffer1);
+	ft_memmove(dest, src, -11);
+	printf("Copied string is %s", dest);
 	return (0);
-}*/
+}

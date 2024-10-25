@@ -1,30 +1,41 @@
-#include<stdio.h>
-int ft_atoi(char *str){
-    int i;
-    int sign;
-    int result;
-    sign = 1;
-    i = 0;
-    result = 0;
-    if (str == NULL)
-        return 0;
-    while(str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-        i++;
-    if(str[i] == '-'){
-        sign = -1;
-        i++;
-    }
-    else if(str[i] == '+'){
-        i++;
-    }
-    while(str[i] != '\0' && str[i] >= '0' && str[i] <= '9'){
-        result = result * 10 + (str[i] - '0');
-        i++;
-    }
-    return (int)(result * sign);
-}
-int main(int argc, char *argv[]){
-    printf("%d\n", ft_atoi(argv[1]));
-    return (0);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbouyi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/24 21:52:20 by mbouyi            #+#    #+#             */
+/*   Updated: 2024/10/24 21:52:23 by mbouyi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
 
+int	ft_atoi(char *nptr)
+{
+	int	i;
+	int	sign;
+	int	result;
+
+	sign = 1;
+	i = 0;
+	result = 0;
+	if (!nptr)
+		return (0);
+	while (nptr[i] == 32 || nptr[i] >= 9 && nptr[i] <= 13)
+		i++;
+	if (nptr[i] == '-')
+	{
+		sign = -1;
+	}
+	else if (nptr[i] == '+')
+	{
+		i++;
+	}
+	while (nptr[i] != '\0' && nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return ((int)(result * sign));
 }
