@@ -33,7 +33,6 @@ int main(void) {
     dest = ft_strdup(NULL);
     printf("Copied string is: %s\n", dest);
 
-    // Free the allocated memory after use
     free(dest);
     return 0;
 }
