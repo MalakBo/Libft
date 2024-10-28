@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:36:15 by mbouyi            #+#    #+#             */
 /*   Updated: 2024/10/22 15:38:01 by mbouyi           ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:54:55 by mbouyi            #+#    #+#             */
 /*   Updated: 2024/10/24 20:55:06 by mbouyi           ###   ########.fr       */

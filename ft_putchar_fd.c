@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:42:02 by mbouyi            #+#    #+#             */
 /*   Updated: 2024/10/26 21:42:11 by mbouyi           ###   ########.fr       */

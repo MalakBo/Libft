@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:21:26 by mbouyi            #+#    #+#             */
 /*   Updated: 2024/10/26 15:21:31 by mbouyi           ###   ########.fr       */

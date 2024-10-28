@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:11:23 by mbouyi            #+#    #+#             */
 /*   Updated: 2024/10/25 22:11:26 by mbouyi           ###   ########.fr       */

@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>                     +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:37:09 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/27 20:37:13 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/10/28 01:18:46 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
 char *ft_strjoin(char *s1, char *s2){
     size_t i;
     size_t j;
