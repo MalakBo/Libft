@@ -3,36 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>                      +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 21:31:09 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/25 21:31:11 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/10/28 22:32:57 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include<stdio.h>
-#include<string.h>
-char *ft_strdup(char *s){
-    int i;
-    char *dest;
-    i = 0;
-    dest = malloc(sizeof(char) * (ft_strlen(s) + 1));
-    if(!dest || !s)
-        return 0;
-    while(s[i]){
-        dest[i] = s[i];
-        i++;
-    }
-    dest[i] = '\0';
-    return(dest);
-}
-int main(void) {
-    //char src[] = "GeeksForGeeks";
-    char *dest;
 
-    dest = ft_strdup(NULL);
-    printf("Copied string is: %s\n", dest);
+char	*ft_strdup(char *s)
+{
+	int		i;
+	char	*dest;
 
-    free(dest);
-    return 0;
+	i = 0;
+	dest = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!dest || !s)
+		return (0);
+	while (s[i])
+	{
+		dest[i] = s[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
+/*int	main(void)
+{
+	char	*dest;
+
+	// char src[] = "GeeksForGeeks";
+	dest = ft_strdup(NULL);
+	printf("Copied string is: %s\n", dest);
+	free(dest);
+	return (0);
+}*/

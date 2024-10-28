@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>                      +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 17:57:48 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/25 17:57:50 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/10/28 17:07:26 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memmove(void *dest, void *src, size_t n)
 {
@@ -32,7 +31,7 @@ void	*ft_memmove(void *dest, void *src, size_t n)
 	}
 	return (dest);
 }
-int	main(void)
+/*int	main(void)
 {
 	char	src[] = "GeeksForGeeks";
 	char	dest[100];
@@ -40,4 +39,4 @@ int	main(void)
 	ft_memmove(dest, src, -11);
 	printf("Copied string is %s", dest);
 	return (0);
-}
+}*/

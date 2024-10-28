@@ -3,13 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>                      +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:39:11 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/24 22:39:15 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/10/28 16:11:49 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
+
 size_t	ft_strlcat(char *dst, char *src, size_t size)
 {
 	size_t	i;
@@ -35,10 +37,10 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 }
 /*int main()
 {
-char *src = "world !";
-char dst[20] = "hello ";
-int d = ft_strlcat(dst,src,4);
-int s = strlcat(dst,src,4);
+char	*src = "world !";
+char	dst[20] = "hello ";
+int		d = ft_strlcat(dst,src,4);
+int		s = strlcat(dst,src,4);
 printf("d1 = %d",d);
 printf("d1 = %d",s);
 }*/
