@@ -6,7 +6,7 @@
 /*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 21:36:59 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/28 22:40:58 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/10/29 22:20:02 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ char	*ft_strtrim(char *s1, char *set)
 	r[i] = '\0';
 	return (r);
 }
-/*int main(){
-	printf("%s\n",ft_strtrim("OKI","OI"));
 
-}*/
+int	main(void)
+{
+	printf("%s\n", ft_strtrim("OKIMM", "OM"));
+}
