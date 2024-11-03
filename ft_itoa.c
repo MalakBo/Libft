@@ -6,7 +6,7 @@
 /*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:27:42 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/03 22:28:26 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/03 22:29:02 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,10 @@ char	*ft_itoa(int n)
 		s[0] = '-';
 	return (s);
 }
-int main(){
+/*int main(){
 	int num;
 	num = 0;
 	char *s = ft_itoa(num);
 	printf("%s\n",s);
 	return (0);
-}
+}*/
