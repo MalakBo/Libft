@@ -6,7 +6,7 @@
 /*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:42:02 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/28 16:12:58 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/03 17:02:48 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 /*int main() {
-	/*char c = 'A'; // Character to print
+	char c = 'A'; // Character to print
 	int fd = 0;   // File descriptor for standard output
 
 	ft_putchar_fd(c, fd); // Call the function to print the character

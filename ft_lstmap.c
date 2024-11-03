@@ -6,7 +6,7 @@
 /*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:54:42 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/03 15:25:02 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/03 17:04:59 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_node = ft_lstnew(f(lst->content));
 		if (!new_node)
 		{
-			ft_lstclear(new_list, del);
+			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_list, new_node);
