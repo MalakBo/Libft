@@ -6,7 +6,7 @@
 /*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:39:11 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/28 16:11:49 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/03 21:37:15 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	size_t	slen;
 
 	i = 0;
-	dlen = ft_strlen(dst);
-	slen = ft_strlen(src);
+	dlen = strlen(dst);
+	slen = strlen(src);
 	if (!dst || !src)
 		return (0);
 	if (size == 0)
@@ -38,7 +38,7 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 /*int main()
 {
 char	*src = "world !";
-char	dst[20] = "hello ";
+char	dst[] = "hello ";
 int		d = ft_strlcat(dst,src,4);
 int		s = strlcat(dst,src,4);
 printf("d1 = %d",d);
