@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 17:57:48 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/28 17:07:26 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/04 23:31:32 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 void	*ft_memmove(void *dest, void *src, size_t n)
 {
-	if (!dest || !src || !n)
+	if (!dest && !src && n)
 		return (0);
-	if (n > ft_strlen(src))
-		n = ft_strlen(src);
 	if (dest < src)
 	{
 		ft_memcpy(dest, src, n);
 	}
 	else
 	{
-		while (n-- > 0)
+		while (n > 0)
 		{
+			n--;
 			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 		}
 	}

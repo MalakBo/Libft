@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:52:20 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/03 17:01:01 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/05 02:07:27 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,11 @@ int	ft_atoi(char *nptr)
 	if (nptr[i] == '-')
 	{
 		sign = -1;
-	}
-	else if (nptr[i] == '+')
-	{
 		i++;
 	}
-	while (nptr[i] != '\0' && nptr[i] >= '0' && nptr[i] <= '9')
+	else if (nptr[i] == '+')
+		i++;
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		result = result * 10 + (nptr[i] - 48);
 		i++;

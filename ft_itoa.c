@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:27:42 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/03 22:29:02 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/05 01:51:02 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ static int	ft_count_digits(int number)
 	int	count;
 
 	count = 0;
-	if(number = 0)
-		return 1;
+	if ((number <= 0))
+		count++;
 	while (number)
 	{
 		number = number / 10;
@@ -29,25 +29,22 @@ static int	ft_count_digits(int number)
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*s;
-	int		number;
+	int			len;
+	char		*s;
+	long int	number;
 
 	number = n;
-	len = ft_count_digits(n);
 	if (n < 0)
-	{
 		number *= -1;
-		len++;
-	}
+	len = ft_count_digits(n);
 	s = malloc(sizeof(char) * len + 1);
 	if (!s)
 		return (NULL);
 	s[len] = '\0';
-	if(n == 0)
+	if (n == 0)
 	{
 		s[0] = '0';
-		return s;
+		return (s);
 	}
 	while (len--)
 	{
@@ -58,6 +55,13 @@ char	*ft_itoa(int n)
 		s[0] = '-';
 	return (s);
 }
+/*int main(){
+	int num;
+	num = -2147483648LL;
+	char *s = ft_itoa(num);
+	printf("%s\n",s);
+	return (0);
+}*/
 /*int main(){
 	int num;
 	num = 0;

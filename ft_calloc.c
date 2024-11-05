@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:21:26 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/28 16:16:01 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/05 03:25:00 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	str = malloc(nmemb * size);
 	if (!str)
 		return (NULL);
-	bzero(str, nmemb * size);
+	ft_bzero(str, nmemb * size);
 	return (str);
 }
 /*int main() {

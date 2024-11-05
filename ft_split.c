@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:14:48 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/29 22:08:19 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/05 04:01:31 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,45 +38,33 @@ int	count_words(char *str, char c)
 	return (count);
 }
 
-char	**ft_split(char *s, char c)
+char **ft_split(char *s, char c)
 {
-	int		i;
-	char	**str;
-	int		k;
-	int		start;
+    char **str;
+    int i = 0;
+    int k = 0;
+    int start;
 
-	str = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	k = 0;
-	while (s[i])
-	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0')
-		{
-			start = i;
-			while (s[i] && s[i] != c)
-				i++;
-			str[k] = ft_substr(s, start, i - start);
-			k++;
-		}
-	}
-	str[k] = '\0';
-	return (str);
-}
-
-void	free_split(char **a)
-{
-	int	i;
-
-	i = 0;
-	while (a[i])
-	{
-		free(a[i]);
-		i++;
-	}
+    if (!s)
+        return (NULL);
+    str = malloc(sizeof(char *) * (count_words(s, c) + 1)); 
+    if (!str)
+        return (NULL);
+    while (s[i])
+    {
+        while (s[i] == c) 
+            i++;
+        if (s[i] != '\0') 
+        {
+            start = i; 
+            while (s[i] && s[i] != c) 
+                i++;
+            str[k] = ft_substr(s, start, i - start); 
+            k++;
+        }
+    }
+    str[k] = NULL; 
+    return str;
 }
 
 /*int	main(void)

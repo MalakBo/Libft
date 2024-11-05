@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:39:11 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/03 21:37:15 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/04 23:51:14 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	size_t	slen;
 
 	i = 0;
-	dlen = strlen(dst);
-	slen = strlen(src);
+	dlen = ft_strlen(dst);
+	slen = ft_strlen(src);
 	if (!dst || !src)
 		return (0);
 	if (size == 0)
 		return (slen);
 	if (dlen >= size)
 		return (size + slen);
-	while (dst[i] != '\0' && src[i] && dlen + i < size - 1)
+	while (src[i] != '\0' && dlen + i < size - 1)
 	{
 		dst[dlen + i] = src[i];
 		i++;

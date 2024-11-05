@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+         #
+#    By: mac <mac@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/02 16:22:36 by mbouyi            #+#    #+#              #
-#    Updated: 2024/11/03 18:43:48 by mbouyi           ###   ########.fr        #
+#    Updated: 2024/11/05 02:27:17 by mac              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,11 +69,10 @@ $(NAME): $(OBJ)
 
 bonus: $(NAME) $(OBJB)
 
-$(OBJB): $(BONUS)
-	$(CC) $(CFLAGS) -c $(BONUS)
+bonus: $(OBJ) $(OBJB)
 	ar rcs $(NAME) $(OBJB)
 %.o: %.c
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $< -o $@
 clean:
 	@rm -rf $(OBJ) $(OBJB)
 

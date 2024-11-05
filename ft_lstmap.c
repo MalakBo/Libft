@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:54:42 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/03 17:04:59 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/05 03:55:03 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_node;
 
 	new_list = NULL;
-	if (!lst || del || !f)
+	new_node = NULL;
+	if (!lst || !f)
 		return (NULL);
 	while (lst)
 	{

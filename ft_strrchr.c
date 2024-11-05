@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:55:35 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/10/28 16:10:03 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/05 00:24:54 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ char	*ft_strrchr(char *s, int c)
 {
 	int	i;
 
-	i = ft_strlen(s) - 1;
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
-			return ((char *)(s + i));
+			return ((char *)s + i);
 		}
 		i--;
 	}
-	if (c == '\0')
-		return ((char *)(s + i));
-	return (0);
+	if (c == 0)
+		return ((char *)s + i);
+	return (NULL);
 }
