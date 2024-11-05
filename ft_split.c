@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:14:48 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 04:01:31 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/05 14:23:46 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,33 +38,33 @@ int	count_words(char *str, char c)
 	return (count);
 }
 
-char **ft_split(char *s, char c)
+char	**ft_split(char *s, char c)
 {
-    char **str;
-    int i = 0;
-    int k = 0;
-    int start;
+	char	**str;
 
-    if (!s)
-        return (NULL);
-    str = malloc(sizeof(char *) * (count_words(s, c) + 1)); 
-    if (!str)
-        return (NULL);
-    while (s[i])
-    {
-        while (s[i] == c) 
-            i++;
-        if (s[i] != '\0') 
-        {
-            start = i; 
-            while (s[i] && s[i] != c) 
-                i++;
-            str[k] = ft_substr(s, start, i - start); 
-            k++;
-        }
-    }
-    str[k] = NULL; 
-    return str;
+	int (i), (k), (start);
+	i = 0;
+	k = 0;
+	if (!s)
+		return (NULL);
+	str = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!str)
+		return (NULL);
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+		{
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			str[k] = ft_substr(s, start, i - start);
+			k++;
+		}
+	}
+	str[k] = NULL;
+	return (str);
 }
 
 /*int	main(void)

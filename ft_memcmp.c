@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:24:53 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 03:28:08 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/05 14:20:59 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,24 +27,25 @@ int	ft_memcmp(void *s1, void *s2, size_t n)
 	}
 	return (0);
 }
+
 /*int main() {
     // Test case 1
-    printf("Test 1: %d\n", ft_memcmp("t\200", "t\0", 2)); // Expected: 1
+    printf("Test 1: %d\n", ft_memcmp("t\200", "t\0", 2)); 
 
     // Test case 2
-    printf("Test 2: %d\n", ft_memcmp("testss", "test", 5)); // Expected: 1
+    printf("Test 2: %d\n", ft_memcmp("testss", "test", 5)); 
 
     // Test case 3
-    printf("Test 3: %d\n", ft_memcmp("", "test", 4)); // Expected: -1
+    printf("Test 3: %d\n", ft_memcmp("", "test", 4)); 
 
     // Test case 4
-    printf("Test 4: %d\n", ft_memcmp("test", "", 4)); // Expected: 1
+    printf("Test 4: %d\n", ft_memcmp("test", "", 4)); 
 
     // Test case 5
-    printf("Test 5: %d\n", ft_memcmp("abc", "abc", 3)); // Expected: 0
+    printf("Test 5: %d\n", ft_memcmp("abc", "abc", 3)); 
 
     // Test case 6
-    printf("Test 6: %d\n", ft_memcmp("abc", "abd", 3)); // Expected: Negative value
+    printf("Test 6: %d\n", ft_memcmp("abc", "abd", 3));
 
     return 0;
 }*/

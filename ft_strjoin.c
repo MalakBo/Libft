@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:37:09 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 03:37:49 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/05 14:24:12 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	if(!s1 && !s2)
+	if (!s1 && !s2)
 		return (NULL);
 	if (!s1)
 		return (s2);
@@ -35,9 +35,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		i++;
 	}
 	while (s2[j] != '\0')
-	{
 		s3[i++] = s2[j++];
-	}
 	s3[i] = '\0';
 	return (s3);
 }
