@@ -6,7 +6,7 @@
 #    By: mac <mac@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/02 16:22:36 by mbouyi            #+#    #+#              #
-#    Updated: 2024/11/05 02:27:17 by mac              ###   ########.fr        #
+#    Updated: 2024/11/05 04:26:23 by mac              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS = ft_isalpha.c \
      ft_memchr.c \
      ft_memcmp.c \
      ft_strnstr.c \
+     ft_substr.c \
      ft_atoi.c \
      ft_calloc.c \
      ft_strdup.c \
@@ -46,15 +47,15 @@ SRCS = ft_isalpha.c \
 
 OBJ = $(SRCS:.c=.o)
 
-BONUS = ft_lstnew.c \
-        ft_lstadd_front.c \
-        ft_lstsize.c \
-        ft_lstlast.c \
-        ft_lstadd_back.c \
-        ft_lstdelone.c \
-        ft_lstclear.c \
-        ft_lstiter.c \
-        ft_lstmap.c 
+BONUS = ft_lstnew_bonus.c \
+        ft_lstadd_front_bonus.c \
+        ft_lstsize_bonus.c \
+        ft_lstlast_bonus.c \
+        ft_lstadd_back_bonus.c \
+        ft_lstdelone_bonus.c \
+        ft_lstclear_bonus.c \
+        ft_lstiter_bonus.c \
+        ft_lstmap_bonus.c 
 
 
 OBJB = $(BONUS:.c=.o)
