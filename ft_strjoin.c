@@ -6,7 +6,7 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:37:09 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 18:49:41 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/06 19:32:31 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(const char *s1,const char *s2)
 
 	i = 0;
 	j = 0;
-	if(!s1 && !s2)
+	if (!s1 && !s2)
 		return (NULL);
 	if (!s1)
 		return (ft_strdup(s2));
@@ -35,9 +35,7 @@ char	*ft_strjoin(const char *s1,const char *s2)
 		i++;
 	}
 	while (s2[j] != '\0')
-	{
 		s3[i++] = s2[j++];
-	}
 	s3[i] = '\0';
 	return (s3);
 }
