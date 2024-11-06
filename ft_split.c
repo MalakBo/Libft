@@ -6,13 +6,13 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:14:48 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 04:01:31 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/05 23:35:05 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char *str, char c)
+int	count_words(const char *str, char c)
 {
 	int	i;
 	int	k;
@@ -38,17 +38,21 @@ int	count_words(char *str, char c)
 	return (count);
 }
 
-char **ft_split(char *s, char c)
+void free_split(char **array, int count) {
+    for (int i = 0; i < count; i++) {
+        free(array[i]);
+    }
+    free(array);
+}
+
+char **ft_split(const char *s, char c)
 {
     char **str;
-    int i = 0;
-    int k = 0;
-    int start;
+    int (i), (k), (start);
 
-    if (!s)
-        return (NULL);
-    str = malloc(sizeof(char *) * (count_words(s, c) + 1)); 
-    if (!str)
+	i = 0;
+	k = 0;
+    if (!s || !(str = malloc(sizeof(char *) * (count_words(s, c) + 1))))
         return (NULL);
     while (s[i])
     {
@@ -59,7 +63,8 @@ char **ft_split(char *s, char c)
             start = i; 
             while (s[i] && s[i] != c) 
                 i++;
-            str[k] = ft_substr(s, start, i - start); 
+            if (!(str[k] = ft_substr(s, start, i - start)))
+                return (free_split(str, k), NULL);
             k++;
         }
     }

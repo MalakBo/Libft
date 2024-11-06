@@ -6,7 +6,7 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:21:26 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 03:25:00 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/05 23:18:44 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*str;
 
+	if(nmemb == 0 || size == 0)
+		return (NULL);
 	if (nmemb && SIZE_MAX / nmemb < size)
 		return (NULL);
 	str = malloc(nmemb * size);

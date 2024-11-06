@@ -3,57 +3,57 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 21:36:59 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/02 22:26:49 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/05 22:50:04 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char c, char *set)
+int    check(char c, char const *set)
 {
-	int	i;
+    int    i;
 
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
+    i = 0;
+    while (set[i])
+    {
+        if (c == set[i])
+            return (1);
+        i++;
+    }
+    return (0);
 }
 
-char	*trim_start(char *s1, char *set)
+char    *ft_strtrim(char const *s1, char const *set)
 {
-	while (*s1 && check(*s1, set))
-		s1++;
-	return (s1);
-}
+    size_t    (i), (size);
+    char    *r;
 
-char	*ft_strtrim(char *s1, char *set)
-{
-	size_t	size;
-	size_t	i;
-	char	*r;
-
-	s1 = trim_start(s1, set);
-	size = strlen(s1);
-	while (size && check(s1[size - 1], set))
-		size--;
-	r = malloc(sizeof(char) * (size + 1));
-	if (!r)
-		return (NULL);
-	i = 0;
-	while (i < size)
-	{
-		r[i] = s1[i];
-		i++;
-	}
-	r[size] = '\0';
-	return (r);
+    i = 0;
+    if (!s1)
+        return (NULL);
+    while (s1[i])
+    {
+        if (check(*s1, set))
+            s1++;
+        i++;
+    }
+    size = ft_strlen(s1);
+    while (size)
+    {
+        if (check(s1[size - 1], set))
+            size--;
+        else
+            break ;
+    }
+    r = (char *)malloc((size + 1) * sizeof(char));
+    if (!r)
+        return (NULL);
+    ft_memcpy(r,s1,size);
+    r[size] = '\0';
+    return (r);
 }
 
 /*int	main(void)

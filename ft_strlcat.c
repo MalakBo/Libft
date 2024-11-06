@@ -6,13 +6,13 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:39:11 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/04 23:51:14 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/05 18:33:55 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, char *src, size_t size)
+size_t	ft_strlcat(char *dst,const char *src, size_t size)
 {
 	size_t	i;
 	size_t	dlen;
