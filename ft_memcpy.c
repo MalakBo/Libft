@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:59:35 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 22:19:58 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/07 01:03:55 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	if (dest == src)
 		return (dest);
-	if (!dest && !src)
+	if (!dest || !src)
 		return (NULL);
 	while (i < n)
 	{

@@ -3,85 +3,112 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:14:48 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/06 19:33:04 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/07 00:49:42 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(const char *str, char c)
+int count_words(const char *str, char c)
 {
-	int	i;
-	int	k;
-	int	count;
+    int i;
+    int k;
+    int count;
 
-	i = 0;
-	k = 0;
-	count = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-		{
-			k = 0;
-		}
-		else
-		{
-			if (k == 0)
-				count++;
-			k = 1;
-		}
-		i++;
-	}
-	return (count);
+    i = 0;
+    k = 0;
+    count = 0;
+    while (str[i])
+    {
+        if (str[i] == c)
+            k = 0;
+        else
+        {
+            if (k == 0)
+                count++;
+            k = 1;
+        }
+        i++;
+    }
+    return (count);
 }
 
-void free_split(char **array, int count) {
-    for (int i = 0; i < count; i++) {
+void free_split(char **array, int count)
+{
+    int i;
+
+    i = 0;
+    while (i < count)
+    {
         free(array[i]);
+        i++;
     }
     free(array);
 }
 
-char **ft_split(const char *s, char c)
+char **init_split(char *s, char c)
 {
     char **str;
-    int (i), (k), (start);
 
-	i = 0;
-	k = 0;
-    if (!s || !(str = malloc(sizeof(char *) * (count_words(s, c) + 1))))
+    if (!s)
+        return (NULL);
+    str = malloc(sizeof(char *) * (count_words(s, c) + 1));
+    if (!str)
+        return (NULL);
+    return (str);
+}
+
+int loop(const char *s, char c, int *i)
+{
+    int start;
+
+    while (s[*i] == c)
+        (*i)++;
+    start = *i;
+    while (s[*i] && s[*i] != c)
+        (*i)++;
+    return (start);
+}
+
+char **ft_split(char *s, char c)
+{
+    char **str;
+
+    int (i), (k), (start); 
+    i = 0;
+    k = 0;
+    str = init_split(s, c);
+    if (!str)
         return (NULL);
     while (s[i])
     {
-        while (s[i] == c) 
-            i++;
-        if (s[i] != '\0') 
+        if (s[i] != c)
         {
-            start = i; 
-            while (s[i] && s[i] != c) 
-                i++;
-            if (!(str[k] = ft_substr(s, start, i - start)))
+            start = loop(s, c, &i);
+            str[k] = ft_substr(s, start, i - start);
+            if (!str[k])
                 return (free_split(str, k), NULL);
             k++;
         }
+        else
+            i++;
     }
-    str[k] = NULL; 
-    return str;
+    str[k] = NULL;
+    return (str);
 }
 
-/*int	main(void)
+int main()
 {
-	char *str = "malak 8malak malak hh hh hh hh hh";
-	char **result = ft_split(str, '8');
-
-	for (int i = 0; result && result[i]; i++)
-	{
-		printf("%s\n", result[i]);
-	}
-
-	free_split(result);
-	return (0);
-}*/
+    char **str = ft_split("Hello World", ' ');
+    int i = 0;
+    while (str[i])
+    {
+        printf("%s\n", str[i]);
+        i++;
+    }
+    free_split(str, i);
+    return 0;
+}
