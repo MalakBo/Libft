@@ -6,7 +6,7 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:00:03 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 18:37:45 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/09 04:56:52 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*str;
 
+	if (!s || !f)
+		return (NULL);
 	i = 0;
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)

@@ -6,7 +6,7 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:21:26 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 23:18:44 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/09 05:12:13 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*str;
 
-	if(nmemb == 0 || size == 0)
-		return (NULL);
 	if (nmemb && SIZE_MAX / nmemb < size)
 		return (NULL);
 	str = malloc(nmemb * size);
@@ -27,8 +25,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (str);
 }
 /*int main() {
-	// Attempt to allocate an extremely large amount of memory
-	size_t nmemb = SIZE_MAX;  // Use a very large number to test for failure
+	size_t nmemb = SIZE_MAX;
 	size_t size = sizeof(int);
 
 	int *array = (int *)calloc(nmemb, size);

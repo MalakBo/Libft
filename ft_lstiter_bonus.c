@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:14:01 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/03 15:24:29 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/09 14:56:35 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,22 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+/*void iter_func(void *content)
+{
+    char *str = (char *)content;
+    printf("Node content: %s\n", str);
+}
+
+int main(void)
+{
+    t_list *lst = NULL;
+    ft_lstadd_back(&lst, ft_lstnew(strdup("first")));
+    ft_lstadd_back(&lst, ft_lstnew(strdup("second")));
+    ft_lstadd_back(&lst, ft_lstnew(strdup("third")));
+    
+    printf("Iterating through list:\n");
+    ft_lstiter(lst, iter_func);
+    
+    ft_lstclear(&lst, del_func);
+    return (0);
+}*/

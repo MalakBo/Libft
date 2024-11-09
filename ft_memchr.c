@@ -18,7 +18,7 @@ void	*ft_memchr(void *s, int c, size_t n)
 
 	i = 0;
 	if (!s)
-		return NULL;
+		return (NULL);
 	while (i < n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)

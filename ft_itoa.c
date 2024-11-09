@@ -6,7 +6,7 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:27:42 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 01:51:02 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/09 14:55:23 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,7 @@ char	*ft_itoa(int n)
 }
 /*int main(){
 	int num;
-	num = -2147483648LL;
-	char *s = ft_itoa(num);
-	printf("%s\n",s);
-	return (0);
-}*/
-/*int main(){
-	int num;
-	num = 0;
+	num = -2147483648;
 	char *s = ft_itoa(num);
 	printf("%s\n",s);
 	return (0);

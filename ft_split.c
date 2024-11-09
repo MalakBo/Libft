@@ -6,7 +6,7 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:14:48 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/06 19:33:04 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/09 04:56:34 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,38 +38,44 @@ int	count_words(const char *str, char c)
 	return (count);
 }
 
-void free_split(char **array, int count) {
-    for (int i = 0; i < count; i++) {
-        free(array[i]);
-    }
-    free(array);
-}
-
-char **ft_split(const char *s, char c)
+void	free_split(char **a)
 {
-    char **str;
-    int (i), (k), (start);
+	int	i;
 
 	i = 0;
+	if (!a)
+		return ;
+	while (a[i])
+		free(a[i++]);
+	free(a);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**a;
+
+	int (i), (k), (start);
+	if (!s)
+		return (NULL);
+	a = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!a)
+		return (NULL);
+	i = 0;
 	k = 0;
-    if (!s || !(str = malloc(sizeof(char *) * (count_words(s, c) + 1))))
-        return (NULL);
-    while (s[i])
-    {
-        while (s[i] == c) 
-            i++;
-        if (s[i] != '\0') 
-        {
-            start = i; 
-            while (s[i] && s[i] != c) 
-                i++;
-            if (!(str[k] = ft_substr(s, start, i - start)))
-                return (free_split(str, k), NULL);
-            k++;
-        }
-    }
-    str[k] = NULL; 
-    return str;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i > start)
+			a[k++] = ft_substr(s, start, i - start);
+		if (!a)
+			free_split(a);
+	}
+	a[k] = NULL;
+	return (a);
 }
 
 /*int	main(void)

@@ -6,7 +6,7 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:49:26 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/05 04:04:49 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/09 02:02:14 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*int main() {
 	// Test cases
 	char *str1 = "Hello, World!";
-	char *result1 = ft_substr(str1, 7, 5);
+	char *result1 = ft_substr(str1, 7, 5); 12 10
 	printf("Result 1: %s\n", result1);
 	free(result1);
 
