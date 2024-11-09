@@ -6,7 +6,7 @@
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:14:48 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/09 04:56:34 by mac              ###   ########.fr       */
+/*   Updated: 2024/11/09 15:19:09 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ int	count_words(const char *str, char c)
 	while (str[i])
 	{
 		if (str[i] == c)
-		{
 			k = 0;
-		}
 		else
 		{
 			if (k == 0)
@@ -78,16 +76,15 @@ char	**ft_split(char const *s, char c)
 	return (a);
 }
 
-/*int	main(void)
+/*int main()
 {
-	char *str = "malak 8malak malak hh hh hh hh hh";
-	char **result = ft_split(str, '8');
-
-	for (int i = 0; result && result[i]; i++)
+	char **str = ft_split("Hello World", ' ');
+	int i = 0;
+	while (str[i])
 	{
-		printf("%s\n", result[i]);
+		printf("%s\n", str[i]);
+		i++;
 	}
-
-	free_split(result);
+	free_split(str, i);
 	return (0);
 }*/
