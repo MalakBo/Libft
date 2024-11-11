@@ -6,7 +6,7 @@
 #    By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/02 16:22:36 by mbouyi            #+#    #+#              #
-#    Updated: 2024/11/09 16:01:28 by mbouyi           ###   ########.fr        #
+#    Updated: 2024/11/11 15:38:38 by mbouyi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ OBJB = $(BONUS:.c=.o)
 # The name of the library
 NAME = libft.a
 # Compiler and flags
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 # Builds the library
 all: $(NAME)

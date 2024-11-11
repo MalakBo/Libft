@@ -6,13 +6,13 @@
 /*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 21:36:59 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/09 16:10:09 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/09 20:47:59 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char c, char const *set)
+static int	check(char c, char const *set)
 {
 	int	i;
 

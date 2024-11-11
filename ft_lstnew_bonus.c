@@ -6,7 +6,7 @@
 /*   By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 22:31:29 by mbouyi            #+#    #+#             */
-/*   Updated: 2024/11/09 16:12:32 by mbouyi           ###   ########.fr       */
+/*   Updated: 2024/11/11 15:13:53 by mbouyi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ t_list	*ft_lstnew(void *content)
 }
 /*int main(void)
 {
-    char *str = "test content";
-    t_list *node = ft_lstnew(str);
-    printf("Content: %s\n", (char *)node->content);
+    int		f = 5;
+    t_list *node = ft_lstnew(&f);
+    printf("Content: %d\n", (int *)node->content);
     printf("Next pointer: %p\n", node->next);
     free(node);
     return (0);
