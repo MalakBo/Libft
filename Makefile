@@ -6,7 +6,7 @@
 #    By: mbouyi <mbouyi@student.1337.ma>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/02 16:22:36 by mbouyi            #+#    #+#              #
-#    Updated: 2024/11/11 15:38:38 by mbouyi           ###   ########.fr        #
+#    Updated: 2024/11/14 21:03:18 by mbouyi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,9 +79,9 @@ bonus: $(OBJB)
 	$(CC) $(CFLAGS) -c $< -o $@
 # Removes all object files
 clean:
-	@rm -rf $(OBJ) $(OBJB)
+	rm -rf $(OBJ) $(OBJB)
 # Removes object files and the library file
 fclean: clean
-	@rm -rf $(NAME)
+	rm -rf $(NAME)
 # Rebuild target.
 re: fclean all
